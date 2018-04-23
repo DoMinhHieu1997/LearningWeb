@@ -31,22 +31,21 @@
 						})
 					),
 					$("<div>",{class:"onslide"}).append(
-						$("<i>",{class:"fa fa-home"}),
-						// $("<div>",{class:"pl-6"}).append(
+						$("<i>",{class:"fa fa-home cb"}),
+						$("<div>",{class:"pl-6"}).append(
 						["Giới Thiệu","Tin Tức & Thông Báo","Tuyển Sinh","Đào Tạo","Sinh Viên","Đối Ngoại","Khoa Học Công Nghệ","Liên Hệ"
 						].map(function(v,i){
 							return $("<div>",{text:v,class:"m-xanh onsl"}).append(
 								$("<div>",{class:"po dn"}).append(
 									[[" >> Tổng Quan"," >> Cơ Sở Vật chất"],[" >> Tin Tức"," >> Thông Báo"],[" >> Đại Học"," >> Cao Đẳng"],[" >> Chính Quy"," >> Vừa Làm Vừa Học"],[" >> Hoạt Động"," >> Hỗ Trợ"],[" >> Chương Trình Quốc Tế"," >> Dự Án Quốc Tế"],[" >> Tin KHCN"," >> Hội Nghị & Hội Thảo"],[]][i].map(function(a,b){
 									return $("<div>",{class:"bb"}).append(
-											$("<div>",{class:"pr",text:a}),
-											$("<div>",{class:"af"})
+											$("<div>",{class:"pr onsls",text:a}),
 										)
 									})
 								)
 							)
 						})//
-						// )
+					)
 					),		
 					$("<div>",{class:"prev nut-sl m-trang"}).append(
 						$("<i>",{class:"fa fa-chevron-circle-left"})
@@ -82,10 +81,57 @@
 						$("<h1>",{text:"Tin Tức"}).addClass('textlicss')
 					)
 				),
-				$("<div>").addClass('new').append(
-					$("<div>").addClass('new1').append(
-						$("<div>").addClass('new2'),
-						$("<div>").addClass('new3')
+				$("<div>",{class:"new"}).append(
+					$("<div>",{class:"new1"}).append(
+						$("<div>",{class:"new2"}).append(
+							[
+								{
+									img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNDUWhpbfR08tAW7IzkmNgg1-oDvM8L32xujCXeqyVV2QPH24e",
+									t:"Đại học thủy lợi đoạt giải nhất bóng đá sinh viên "
+								},
+								{
+									img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTL2BVcvBtOfJLxUcHS2ft6e78CSCsl7Fs-dq20hbuh-I_pWcY",
+									t:"Đại học thủy lợi trao giải thưởng và bằng khen cho giáo viên ưu tú"
+								},
+								{
+									img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSG0oZGGEH-bzX1Qc5uoy3PvrB4tvhGJteQGTqlxU2_BbnS7Rre",
+									t:"Gặp mặt giao lưu các khoa trong trường"
+								},
+								{
+									img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrdRuIxY1g3tQjqgKpnsK53ptVJ0MWcxXeAnLKKOPn--sMRNdD7A",
+									t:"Đại học thủy lợi hợp tác giao lưu phát triển với Nhật Bản"
+								},
+								{
+									img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk6T1UtNBUqhywLFdCjedG0oq0dySsBwiEgeHlWkAyz9NnJ9rQ",
+									t:"Gặp mặt giao lưu sinh viên các cơ sở của Đại Học Thủy Lợi"
+								},
+								{
+									img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzK8H4BVWBaO2Pe_UJGFMLb5bzzRjZ7KqOX2ehgqLefst2MeBY",
+									t:"Chung kết cuộc thi Mr and Mrs Đại học thủy lợi"
+								}
+							].map(function(v,i){
+								return $("<div>",{class:"otin"}).append(
+									$("<img>",{class:"otinanh",src:v.img}),
+									$("<div>",{class:"otinchude",text:v.t})
+									)
+								})
+							),
+						$("<div>",{class:"new3"}).append(
+							$("<div>",{class:"otin3",text:"Thông Báo"}),
+							[
+								"thông báo tuyển sinh năm học mới 2019",
+								"sinh viên trao đổi",
+								"họp lớp kì tháng 6 năm 2018",
+								"ngày hội việc làm cho sinh viên với sự hợp tác của các doanh nghiệp",
+								"Chương trinhg hợp tác với các trường đại học"
+							].map(function(v,i){
+								return $("<div>",{class:"otin3to"}).append(
+									$("<div>",{class:"otin3span"}),
+									$("<div>",{class:"otin3chude",text:v})
+									)
+								}),
+							$("<img>",{class:"otin3img",src:"http://www.tlu.edu.vn/portals/0/Images/2018/Islt2018Banner.jpg"})
+							)
 					)//kt new1
 				),//kt new
 				$("<div>").addClass('td').append(
@@ -97,11 +143,24 @@
 					$("<div>").addClass('new1')//kt new1
 				),//kt new
 				$("<div>").addClass('footertop').append(
-					$("<span>",{text:"©  2018   - Trường đại học Thủy Lợi"}).addClass('spanfooter')
+					$("<span>",{text:"©  2018   - TRƯỜNG ĐẠI HỌC THỦY LỢI"}).addClass('spanfooter')
 				),//kt footertop
-				$("<div>").addClass('footermiddle').append(
-					$("<div>").addClass('footermiddle1').append(
-						$("<div>").addClass(''),//
+				$("<div>",{class:"footermiddle"}).append(
+					$("<div>",{class:"footermiddle1"}).append(
+						$("<div>",{class:"footerdiv"}).append(
+							$("<div>",{class:"ftsd"}).append(
+								$("<div>",{class:"ftss"}).append(
+									$("<img>",{src:"https://scontent.fhan5-5.fna.fbcdn.net/v/t1.0-1/p50x50/10453365_1661644284109889_130186908521712753_n.jpg?_nc_cat=0&oh=767d42913cbb546ad1470d44c02b5ed3&oe=5B62DD54"}).css({"box-shadow": "0 1px 6px rgba(0, 0, 0, .5)"}),
+									$("<div>").css({"display":"inline-block","vertical-align":"top"}).append(
+										$("<a>",{class:"aa gc",text:"ĐẠI HỌC THỦY LỢI",href:"https://www.facebook.com/daihocthuyloi1959/"}),
+										$("<div>",{class:"ab",text:"40,245 likes"})
+										),
+									)
+								),
+							$("<div>",{class:"hw"}).append(
+								$("<div>").css({})
+								)
+						),//
 						$("<div>").addClass('footerdiv').append(
 							$("<div>",{text:"TRƯỜNG ĐẠI HỌC THỦY LỢI"}),
 							$("<div>",{text:"Địa chỉ : 175 TÂY SƠN, ĐỐNG ĐA, HÀ NỘI."}),

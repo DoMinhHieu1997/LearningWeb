@@ -261,6 +261,47 @@
 {
 	color: blue;
 }
+.otieudeanh
+{
+	width: 100%;
+	height: 250px;
+	display: block;
+	vertical-align: top;
+	position: relative;
+}
+.otrenanh
+{
+	position: absolute;
+	width: 100%;
+	color: white;
+	font-size: 100%;
+	text-align: center;
+	padding: 10px 0;
+	font-family: 'Roboto Condened', Arial;
+	margin-top: 160px;
+	background: rgba(0, 25, 25, .5);
+}
+.otieudecd
+{
+	font-size: 20px;
+	color:#a90000;
+	display: block;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	margin: 10px 0;
+	cursor: pointer;
+}
+.otieudecd:hover
+{
+	color: blue;
+}
+.otieudend
+{
+	font-size: 16px;
+	font-family: Helvetica, Arial, Tahoma, sans-serif;
+	display: block;
+	cursor: pointer;
+	color: black;
+}
 .td
 {
 	width: 100%;

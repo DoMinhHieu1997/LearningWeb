@@ -74,7 +74,7 @@
 						].map(function(v,i){
 							return $("<div>").append(
 										$("<img>",{src:v.img}).addClass('imglicss'),
-										$("<div>",{text:v.t}).css({"color":"#a90000"})
+										$("<div>",{text:v.t}).css({"color":"#a90000","cursor":"pointer"})
 									).addClass('licss')
 						}),
 						$("<hr>").css({"color":"#ddd"}),
@@ -139,8 +139,22 @@
 						$("<h1>",{text:"Tiêu Điểm"}).addClass('textlicss')
 					)//kt td1
 				),//kt td
-				$("<div>").addClass('new4').append(
-					$("<div>").addClass('new1')//kt new1
+				$("<div>",{class:"new"}).append(
+					$("<div>",{class:"new1"}).append(
+						[
+							{img:"http://www.tlu.edu.vn/Portals/0/2017/Thang%202/bk2.JPG",t1:"Ngành nghề và cơ hội việc làm của sinh viên",t2:"Trường đại học thủy lợi dạy đa ngành đa lĩnh vực, đồng thời quan tâm tới...",t3:"ĐẠI HỌC CHÍNH QUY"},
+							{img:"http://www.tlu.edu.vn/Portals/0/2017/Thang12/saodo4.jpg",t1:"Cựu sinh viên Đại Học Thủy Lợi được vinh danh",t2:"Tại chương trình tuyên dương các doanh nghiệp tài năng trẻ .....",t3:"CỰU SINH VIÊN"},
+							{img:"http://www.tlu.edu.vn/Portals/0/dai-hoc-thuy-loi-ha-noi-635685234409325664.jpg",t1:"Thông báo lịch học chuyển đổi sinh viên đào tạo",t2:"Thông báo lịch học chuyển đổi đào tạo thạc sĩ năm 2018",t3:"THẠC SỸ"}
+						].map(function(v,i){
+							return $("<div>",{class:"otin"}).append(
+								$("<div>",{class:"otieudeanh"}).css({background:"url("+v.img+")",backgroundSize:"cover",backgroundPosition:"center"}).append(
+									$("<div>",{class:"otrenanh",text:v.t3})
+									),
+								$("<div>",{class:"otieudecd",text:v.t1}),
+								$("<div>",{class:"otieudend",text:v.t2})
+							)
+						})
+					)
 				),//kt new
 				$("<div>").addClass('footertop').append(
 					$("<span>",{text:"©  2018   - TRƯỜNG ĐẠI HỌC THỦY LỢI"}).addClass('spanfooter')
